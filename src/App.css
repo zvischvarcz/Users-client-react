@@ -1,8 +1,16 @@
 
 
-.App {
+.Home {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+}
+
+
+.update-delete-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
 }

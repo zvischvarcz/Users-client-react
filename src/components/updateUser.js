@@ -3,24 +3,28 @@ import { updateUser } from '../utills';
 
 
 
-function Update() {
+function Update(props) {
 
-    const [username, setUsername] = useState("")
     const [key, setKey] = useState("")
     const [value, setValue] = useState("")
+    const [response, setResponse] = useState("")
+
 
     const submitHandler = async (event) => {
         event.preventDefault()
-        console.log(await updateUser(username, key, value))
+        let res = (await updateUser(props.user, key, value))
+        if(res.message){
+          setResponse(res.message)
+        } else {
+          setResponse(res.errorMessage)
+        }
     }
 
   return (
     <div className='update'>
-        <h2>Update User below</h2>
+        <h2>Update</h2>
         <form onSubmit={submitHandler}>
-        <label> Username:
-              <br></br>
-              <input onChange={(event) => setUsername(event.target.value)} />
+        <label> Username: {props.user}
             </label>
             <br></br>
             <br></br>
@@ -48,6 +52,7 @@ function Update() {
             <br></br>
             <br></br>
             <button type='submit'>Update</button>
+            <p>{response}</p>
         </form>
     </div>
   );

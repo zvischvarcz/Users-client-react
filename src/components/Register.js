@@ -8,10 +8,19 @@ function Register() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [response, setResponse] = useState("")
 
     const submitHandler = async (event) => {
         event.preventDefault()
-        console.log(await registerUser(username, email, password))
+       let register = await registerUser(username, email, password)
+       if (register === "Validation error"){
+        setResponse("Username already exists")
+       } else if (register.message === "Successfully registered") {
+        setResponse("Successfully registered")
+       } else {
+        setResponse(register)
+       }
+
     }
 
   return (
@@ -31,6 +40,7 @@ function Register() {
             </label>
             <br></br>
             <button type='submit'>Register</button>
+            <p>{response}</p>
         </form>
     </div>
   );
