@@ -23,7 +23,7 @@ function AddBooks(props) {
   return (
     <div className='register'>
         <h2>Add your books Below</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className='form'>
             <label>Title: &nbsp; 
                 <input onChange={(e) => {setTitle(e.target.value)}}></input>
             </label>

@@ -23,7 +23,7 @@ function Update(props) {
   return (
     <div className='update'>
         <h2>Update</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className='form'>
         <label> Username: {props.user}
             </label>
             <br></br>

@@ -19,7 +19,7 @@ function LoggedIn() {
         } else {
             setUser(localStorage.getItem("username"))
         }
-      }, [])
+      }, [navigate])
 
     const logOut = () => {
        deleteCookie("jwt-token")
@@ -28,8 +28,12 @@ function LoggedIn() {
 
   return (
     <div>
-        
-        <h2>Welcome {user}</h2>
+        <div className='head-logged-in'>
+            <h2>Welcome {user}</h2>
+            <form onSubmit={logOut}>
+            <button type='submit'>Log Out</button>
+            </form>
+        </div>
         <div className="update-delete-wrap">
             <AddBooks user={user}/>
             <Update user={user}/>
@@ -38,9 +42,7 @@ function LoggedIn() {
         <div> 
             <Books user={user}/>
         </div>
-        <form onSubmit={logOut}>
-        <button type='submit'>Log Out</button>
-        </form>
+        
     </div>
   );
 }

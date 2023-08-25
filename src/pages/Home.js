@@ -25,6 +25,7 @@ function Home({setUser}) {
   return (
     <div className="Home">
       <Register />
+      <div className='line-seperation'></div>
       <div>
         <Login newUser={setUser} />
       </div>

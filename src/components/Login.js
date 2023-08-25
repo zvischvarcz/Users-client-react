@@ -25,7 +25,7 @@ function Login({newUser}) {
   return (
     <div className='login'>
         <h2>Please login below</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className='form'>
             <label>Username: &nbsp; 
                 <input onChange={(e) => {setUsername(e.target.value)}}></input>
             </label>

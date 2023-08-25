@@ -26,7 +26,7 @@ function Register() {
   return (
     <div className='register'>
         <h2>Please register below</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className='form'>
             <label>Username: &nbsp; 
                 <input onChange={(e) => {setUsername(e.target.value)}}></input>
             </label>
