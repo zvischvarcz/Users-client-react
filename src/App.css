@@ -1,10 +1,30 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
 
 .Home {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+
+.reg-login-button {
+  font-family: 'Inknut Antiqua', serif;
 }
 
 
@@ -13,4 +33,16 @@
   justify-content: space-around;
   align-items: center;
   height: 80vh;
+}
+
+.booksWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eachBookWrap {
+  margin: 2vw;
+  padding: 2vw;
+  background-color: bisque;
+  text-align: center;
 }

@@ -5,6 +5,7 @@ import { deleteCookie } from '../common';
 import { useNavigate } from 'react-router-dom';
 import { getCookie } from '../common';
 import AddBooks from '../components/AddBooks';
+import Books from '../components/Books';
 
 function LoggedIn() {
     const navigate = useNavigate()
@@ -30,9 +31,12 @@ function LoggedIn() {
         
         <h2>Welcome {user}</h2>
         <div className="update-delete-wrap">
-        <AddBooks user={user} />
-        <Update user={user}/>
-        <Delete user={user} />
+            <AddBooks user={user}/>
+            <Update user={user}/>
+            <Delete user={user} />
+        </div>
+        <div> 
+            <Books user={user}/>
         </div>
         <form onSubmit={logOut}>
         <button type='submit'>Log Out</button>

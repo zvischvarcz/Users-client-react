@@ -15,7 +15,7 @@ function Register() {
        let register = await registerUser(username, email, password)
        if (register === "Validation error"){
         setResponse("Username already exists")
-       } else if (register.message === "Successfully registered") {
+       } else if (register.message !== undefined) {
         setResponse("Successfully registered")
        } else {
         setResponse(register)
@@ -39,7 +39,7 @@ function Register() {
                 <input type='password'  onChange={(e) => {setPassword(e.target.value)}}></input>
             </label>
             <br></br>
-            <button type='submit'>Register</button>
+            <button className='reg-login-button' type='submit'>Register</button>
             <p>{response}</p>
         </form>
     </div>

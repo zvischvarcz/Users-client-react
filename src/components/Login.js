@@ -38,7 +38,7 @@ function Login({newUser}) {
                 <input type='password'  onChange={(e) => {setPassword(e.target.value)}}></input>
             </label>
             <br></br>
-            <button type='submit'>Login</button>
+            <button className='reg-login-button' type='submit'>Login</button>
             <p>{errorMessage}</p>
         </form>
     </div>

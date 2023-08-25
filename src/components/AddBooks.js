@@ -12,7 +12,6 @@ function AddBooks(props) {
     const submitHandler = async (event) => {
         event.preventDefault()
        let res = await addBook(title, author, props.user)
-       console.log(res)
        if (res.message === "Validation error"){
         setResponse("Book already exists")
        } else {
