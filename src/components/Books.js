@@ -9,7 +9,7 @@ function Books(props) {
         if (props.user) {
             const fetchData = async () => {
                 try {
-                    const booksRaw = await fetch(`http://localhost:5001/books/getUserAndBooks/${props.user}`, {
+                    const booksRaw = await fetch(`${process.env.REACT_APP_API_URL}books/getUserAndBooks/${props.user}`, {
                         method: 'GET',
                         headers: {"Content-Type": "application/json"}
                     });;
