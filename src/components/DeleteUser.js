@@ -17,7 +17,7 @@ function Delete(props) {
 
   return (
     <div className='login'>
-        <h2>Delete</h2>
+        <h2>Delete account</h2>
         <form onSubmit={submitHandler} className='form'>
             <label>Username: {props.user}
             </label>

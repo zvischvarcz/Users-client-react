@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
 
 .Home {
   display: flex;
@@ -45,6 +48,7 @@ button {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3vh;
+  font-family: 'Istok Web', sans-serif;
 }
 
 .form {
@@ -63,13 +67,16 @@ button {
 .booksWrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .eachBookWrap {
   margin: 2vw;
   padding: 2vw;
-  background-color: bisque;
+  background-color: rgb(196, 255, 251);
   text-align: center;
+  font-family: 'Domine', serif;
+  border-radius: 3px;
 }
 
 .line-seperation {
@@ -78,4 +85,11 @@ button {
   width: 0px;
   border-left: 1px solid gray;
   height: 80%;
+}
+
+.edit-user {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  border-top: 5px dashed black;
 }

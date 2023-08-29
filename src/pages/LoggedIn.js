@@ -35,12 +35,17 @@ function LoggedIn() {
             </form>
         </div>
         <div className="update-delete-wrap">
-            <AddBooks user={user}/>
-            <Update user={user}/>
-            <Delete user={user} />
+          <AddBooks user={user}/>
         </div>
         <div> 
-            <Books user={user}/>
+          <Books user={user}/>
+        </div>
+        <div className='edit-user'>
+          <h3>Edit {user}</h3>
+        </div>
+        <div className="update-delete-wrap">
+          <Update user={user}/>
+          <Delete user={user} />
         </div>
         
     </div>
